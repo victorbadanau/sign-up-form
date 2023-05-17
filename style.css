@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "space-crusaders";
+    src: url(space_crusaders.ttf);
+}
+
+body{
+    display: flex;
+}
+
+.logo {
+    width: 30vw;
+    height: 100vh;
+    background-image: url(space_plane.jpg);
+    position: relative;
+    text-align: center;
+}
+
+.logo > div {
+   /*  background-color: black;
+    opacity: 0.25; */
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    font-family: "space-crusaders";
+}
+
+.logo > footer {
+    width: 100%;
+    position: absolute;
+    bottom: 1em;
+}
+
+main {
+    width: 70vw;
+}
+
+.logo img {
+    width: 5rem;
+}
