@@ -1,44 +1,134 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-size: 1vmax;
 }
 
 @font-face {
     font-family: "space-crusaders";
-    src: url(space_crusaders.ttf);
+    src: url(styles/space_crusaders.ttf);
 }
 
-body{
+body {
     display: flex;
 }
 
-.logo {
-    width: 30vw;
+section {
+    width: 35vw;
     height: 100vh;
-    background-image: url(space_plane.jpg);
+    background-image: url(styles/mars.jpg);
+    background-size: cover;
+    background-position: 50%;
     position: relative;
     text-align: center;
 }
 
-.logo > div {
-   /*  background-color: black;
-    opacity: 0.25; */
-    width: 100%;
+section div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    top: 20%;
+    width: 100%;
+    height: 10%;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 30%;
     font-family: "space-crusaders";
 }
 
-.logo > footer {
+section img {
+    width: 30%;
+}
+
+
+section > footer {
     width: 100%;
     position: absolute;
     bottom: 1em;
+    color: wheat;
+}
+
+footer > a {
+    color: inherit;
 }
 
 main {
-    width: 70vw;
+    width: 65vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #e5e7eb;
 }
 
-.logo img {
-    width: 5rem;
+main h1, main > div {
+    padding-bottom: 3rem;
+    font-size: 1.5rem;
+    padding-left: 5%;
+}
+
+form {
+    appearance: none;
+    padding-left: 5%;
+    padding-top: 0.5rem;
+    background-color: white;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+form p {
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding-bottom: 1rem;
+    margin-right: 3rem;
+}
+
+label {
+    margin-bottom: 0.25rem;
+}
+
+input {
+    height: 2rem;
+    border: 0.15rem solid #e5e7eb;
+    border-radius: 0.4rem;
+    padding: 0.75rem;
+}
+
+button {
+    width: fit-content;
+    margin-left: 5%;
+    margin-top: 2%;
+    background-color: #b04c2a;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+main > p {
+    padding-left: 5%;
+    padding-top: 2%;
+}
+
+p a {
+    text-decoration: none;
+    color: #b04c2a;
+}
+
+input:focus {
+    border: rgb(60, 188, 231);
+    box-shadow: inset 0 0 0.5rem #e5e7eb;
 }

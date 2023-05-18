@@ -9,34 +9,48 @@
       <script src="main.js" defer></script>
    </head>
    <body>
-      <section class="logo">
+      <section>
          <div>
-            <img src="mcrn.png" alt="MCRN-logo">
+            <img src="styles/mcrn.png" alt="MCRN-logo">
             <p>MARTIAN CONGRESSIONAL REPUBLIC NAVY</p>
          </div>
-         <footer>Photo by <a href="https://unsplash.com/@ivvndiaz">Iván Díaz</a>
+         <footer>Photo by <a href="https://unsplash.com/@daniele71043">Daniele Colucci</a>
             on <a href="https://unsplash.com/">Unsplash</a> </footer>
       </section>
       <main>
          <h1>This is not a real online service! You know you need some adventure in your life.
-            Sign up <i>now</i> to get started.</h1>
-         <p><b>You <i>know</i> you want to!</b> </p>
+            Sign up <i style="font-size: inherit">now</i> to join us.</h1>
+         <div><b style="font-size: inherit">You <i style="font-size: inherit">know</i> you want to!</b></div>
          <form action="#" method="post" id="my-form">
             <p>Let's do this!</p>
-            <label for="first_name">FIRST NAME</label>
-            <input type="text" id="first_name" name="first_name" placeholder="John">
-            <label for="last_name">LAST NAME</label>
-            <input type="text" id="last_name" name="last_name" placeholder="Smith">
-            <label for="email">EMAIL</label>
-            <input type="email" id="email" name="email" placeholder="johnsmith@mail.com">
-            <label for="phone">PHONE NUMBER</label>
-            <input type="tel" id="phone" name="phone">
-            <label for="password">PASSWORD</label>
-            <input type="password" id="password" name="password">
-            <label for="confirm_password">CONFIRM PASSWORD</label>
-            <input type="password" id="confirm_password" name="confirm_password">
+            <div class="wrapper">
+               <div class="input">
+                  <label for="first_name">*FIRST NAME</label>
+                  <input type="text" id="first_name" name="first_name" placeholder="John" aria-label="first name" required>
+               </div>
+               <div class="input">
+                  <label for="last_name">*LAST NAME</label>
+                  <input type="text" id="last_name" name="last_name" placeholder="Smith" aria-label="last name" required>
+               </div>
+               <div class="input">
+                  <label for="email">*EMAIL</label>
+                  <input type="email" id="email" name="email" placeholder="johnsmith@mail.com" required>
+               </div>
+               <div class="input">
+                  <label for="phone">PHONE NUMBER</label>
+                  <input type="tel" id="phone" name="phone">
+               </div>
+               <div class="input">
+                  <label for="password">*PASSWORD</label>
+                  <input type="password" id="password" name="password" class="error" required>
+               </div>
+               <div class="input">
+                  <label for="confirm_password">*CONFIRM PASSWORD</label>
+                  <input type="password" id="confirm_password" name="confirm_password" class="error" required>
+               </div>
+            </div>
          </form>
-         <button type="form" form="my-form">Create Account</button>
+         <button type="submit" form="my-form">Create Account</button>
          <p>Already have an account? <a href="">Log in</a></p>
       </main>
    </body>
