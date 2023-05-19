@@ -21,7 +21,7 @@
          <h1>This is not a real online service! You know you need some adventure in your life.
             Sign up <i style="font-size: inherit">now</i> to join us.</h1>
          <div><b style="font-size: inherit">You <i style="font-size: inherit">know</i> you want to!</b></div>
-         <form action="#" method="post" id="my-form">
+         <form action="#" method="post" id="my-form" onSubmit="return checkPassword(this)">
             <p>Let's do this!</p>
             <div class="wrapper">
                <div class="input">
@@ -65,20 +65,22 @@
                   <input type="password" 
                          id="password" 
                          name="password"
-                         placeholder=" " 
+                         placeholder=" "
+                         pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
                          class="error" 
                          required 
-                         autocomplete="new-password">
+                         autocomplete="password">
                </div>
                <div class="input">
-                  <label for="confirm_password">CONFIRM PASSWORD</label>
+                  <label for="confirmPassword">CONFIRM PASSWORD</label>
                   <input type="password" 
-                         id="confirm_password" 
-                         name="confirm_password"
-                         placeholder=" " 
+                         id="confirmPassword" 
+                         name="confirmPassword"
+                         placeholder=" "
+                         pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
                          class="error" 
                          required 
-                         autocomplete="new-password">
+                         autocomplete="password">
                </div>
             </div>
          </form>
