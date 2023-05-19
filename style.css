@@ -69,7 +69,7 @@ main h1, main > div {
 }
 
 form {
-    appearance: none;
+    /* appearance: none; */
     padding-left: 5%;
     padding-top: 0.5rem;
     background-color: white;
@@ -91,11 +91,12 @@ form p {
 }
 
 .input {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     width: 25%;
-    padding-bottom: 1rem;
     margin-right: 3rem;
+    margin-bottom: 2rem;
 }
 
 label {
@@ -129,6 +130,15 @@ p a {
 }
 
 input:focus {
-    border: rgb(60, 188, 231);
-    box-shadow: inset 0 0 0.5rem #e5e7eb;
+    outline: none;
+    border: 2px solid rgb(2, 147, 180);
+    box-shadow: 0.3rem 0.3rem 0.4rem rgba(0, 0, 0, 0.342);
+}
+
+input:not(:focus):not(:placeholder-shown):invalid {
+    border:  2px solid red;
+}
+
+input:not(:focus):not(:placeholder-shown):valid {
+    border:  2px solid rgb(3, 159, 83);
 }
