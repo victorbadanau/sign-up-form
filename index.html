@@ -29,7 +29,7 @@
                   <input type="text" id="first_name" 
                          name="first_name"
                          placeholder="John" 
-                         aria-label="first name" 
+                         aria-label="first name"
                          required 
                          autocomplete="first name">
                </div>
@@ -66,19 +66,17 @@
                          id="password" 
                          name="password"
                          placeholder=" "
-                         pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
-                         class="error" 
+                         pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
                          required 
                          autocomplete="password">
                </div>
                <div class="input">
-                  <label for="confirmPassword">CONFIRM PASSWORD</label>
+                  <label for="confirmPassword">CONFIRM PASSWORD*</label>
                   <input type="password" 
                          id="confirmPassword" 
                          name="confirmPassword"
                          placeholder=" "
-                         pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
-                         class="error" 
+                         pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
                          required 
                          autocomplete="password">
                </div>
